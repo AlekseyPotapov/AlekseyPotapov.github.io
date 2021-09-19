@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Potapov Aleksey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="./styles/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles/nord.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script src="./scripts/index.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="main_nav">
+        <ul class="main_nav_menu">
+          <li class="menu_item">
+            <a class="menu_link" href="">About Me</a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="">Projects</a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="">Code</a>
+          </li>
+          <li class="menu_item">
+            <a class="menu_link" href="">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main_img">
+        <img src="/img/main_img.JPG" alt="Да, это я" width="300" />
+        <div class="image_mask"></div>
+      </div>
+
+      <h1 class="main_title">Aleksey Potapov</h1>
+
+      <h3 class="sub_title">Junior Front End developer</h3>
+
+      <p class="main_text">
+        Don't ever, for any reason, do anything to anyone for any reason ever,
+        no matter what, no matter where, or who, or who you are with, or where
+        you are going, or where you've been... ever, for any reason
+        whatsoever...
+      </p>
+
+      <div class="education">
+        <h3 class="education_title">Education</h3>
+        <ul class="education_list">
+          <li>
+            <div class="education_list_item_container">
+              <p>The Rolling Scopes School</p>
+              <p class="list_item_years">Present</p>
+            </div>
+          </li>
+          <li>
+            <div class="education_list_item_container">
+              <p>Belarussian State Economical University</p>
+              <p class="list_item_years">2013 - 2018</p>
+            </div>
+          </li>
+          <li>
+            <div class="education_list_item_container">
+              <p>Minsk Radioengineering College</p>
+              <p class="list_item_years">2009 - 2013</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="video">
+        <iframe
+          src="https://www.youtube.com/embed/C0I60kpUPmU"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </main>
+    <section id="contacts">
+      <div class="contacts_container">
+        <h3 class="contacts_title education_title">Contacts</h3>
+
+        <a href="tel:+375293233894" class="contacts_link_container">
+          <p class="contacts_link">+375 (29) 323 38 94</p>
+          <i class="fa fa-phone"></i>
+        </a>
+        <a href="mailto:aal.potapov@gmail.com" class="contacts_link_container">
+          <p class="contacts_link">aal.potapov@gmail.com</p>
+          <i class="fa fa-envelope"></i>
+        </a>
+        <a
+          href="https://github.com/alekseypotapov"
+          class="contacts_link_container"
+        >
+          <p class="contacts_link">Github</p>
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+    </section>
+    <section id="code" class="code_section">
+      <h3 class="code_title education_title">Code Examples</h3>
+      <p class="code-separator">Javascript</p>
+      <pre><code class="language-javascript">
+        class LinkedListNode {
+            /**
+             * Creates a linked list node.
+             * @param {any} value
+             * @param {LinkedListNode} [next]
+             */
+            constructor(value, next) {
+              this._value = value;
+              this.setNext(next);
+            }
+          
+            /**
+             * @public
+             * @param {any} value
+             * @returns {LinkedListNode}
+             */
+            setValue(value) {
+              this._value = value;
+              return this;
+            }
+          
+            /**
+             * @public
+             * @returns {any}
+             */
+            getValue() {
+              return this._value;
+            }
+          
+            /**
+             * @public
+             * @param {LinkedListNode} [next]
+             * @returns {LinkedListNode}
+             */
+            setNext(next) {
+              if (next && !(next instanceof LinkedListNode)) {
+                throw new Error('setLeft expects a LinkedListNode or null');
+              }
+              this._next = next || null;
+              return this;
+            }
+          
+            /**
+             * @public
+             * @returns {LinkedListNode}
+             */
+            getNext() {
+              return this._next;
+            }
+          
+            /**
+             * @public
+             * @returns {boolean}
+             */
+            hasNext() {
+              return this._next instanceof LinkedListNode;
+            }
+          }
+          
+          exports.LinkedListNode = LinkedListNode;
+      </code></pre>
+      <p class="code-separator">CSS</p>
+      <pre class="centered-code"><code class="language-css">
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #2e3440;
+            color: #d8dee9;
+            font-size: 20px;
+          }
+          
+          a {
+            text-decoration: none;
+            color: #d8dee9;
+          }
+          
+          h1 {
+            text-align: center;
+          }
+          
+          .main_nav {
+            width: 40%;
+            margin: 0 auto;
+          }
+          
+          .main_nav_menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            justify-content: space-around;
+          }
+          
+          .menu_link {
+            display: block;
+            color: #81a1c1;
+            text-decoration: underline;
+          }
+          
+          .menu_link:hover {
+            text-decoration: none;
+            font-weight: 700;
+          }
+      </code></pre>
+    </section>
+    <footer></footer>
+  </body>
+</html>
